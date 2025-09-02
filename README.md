@@ -13,10 +13,13 @@ KLE Tech Question Bank is a web-based platform designed to help students and fac
 ## Screenshots
 ### Login Page
 ![Image](https://github.com/user-attachments/assets/390f402c-a6f7-4358-b31d-9973679f0c83)
+
 ### Home Page
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d33a55ea-ce54-4b38-a8a2-7183987d42af" />
+
 ### Upload and Download Page
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/1851d2fe-0360-43bf-a6d1-897a52601753" />
+
 ### Feedback Page
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7cdff8d5-1b1b-4dfc-ba71-060760601f55" />
 

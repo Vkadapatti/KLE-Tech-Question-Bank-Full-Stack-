@@ -23,7 +23,11 @@ KLE Tech Question Bank is a web-based platform designed to help students and fac
 !
     ```
 ### Usage
-1. Open `index.html` in your web browser to access the platform.
-2. Register or log in using your credentials.
-3. Navigate through the sections to upload or download question papers, provide feedback, and learn more about the platform.
-
+🚀 Getting Started 
+1. Clone the Repository
+   git clone https://github.com/your-username/KLE-Tech-Question-Bank.git
+ cd KLE-Tech-Question-Bank
+ 2. Install Dependencies
+    pip install -r requirements.txt
+ 3. Run the Application
+    python app.py

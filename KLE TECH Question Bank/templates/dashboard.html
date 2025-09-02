@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KLE Tech Question Bank</title>
+    <style>
+        body {
+        
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            margin: 0;
+            padding: 20px;
+        }
+
+
+
+        h2 {
+            text-align: center;
+            color: #004d40;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            margin: 20px auto;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #b2dfdb;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #004d40;
+            color: white;
+        }
+
+        .action-buttons a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #00796b;
+        }
+
+        .action-buttons a:hover {
+            text-decoration: underline;
+        }
+
+         .flash {
+            background: #ffccbc;
+            color: #d84315;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+
+        .highlight {
+            background-color: #e0f2f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>KLE Tech Question Bank</h2>
+
+    <div class="container">
+        <h3>📤 Upload File</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h3>📁 Uploaded Files</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Type</th>
+                    <th>Size (KB)</th>
+                    <th>Upload Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                <tr class="highlight">
+                    <td>{{ file.filename }}</td>
+                    <td>{{ file.type }}</td>
+                    <td>{{ file.size }}</td>
+                    <td>{{ file.upload_time }}</td>
+                    <td class="action-buttons">
+                        <a href="/download/{{ file._id }}">⬇️ Download</a> |                        
+                        <a href="/delete/{{ file._id }}" onclick="return confirm('Delete this file?')">🗑️ Delete</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5">No files uploaded yet.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

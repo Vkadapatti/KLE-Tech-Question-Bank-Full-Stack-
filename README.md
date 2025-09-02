@@ -23,16 +23,21 @@ KLE Tech Question Bank is a web-based platform designed to help students and fac
 !
     ```
 ### Usage
+
+## 🚀 Getting Started
+
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/your-username/KLE-Tech-Question-Bank.git
 cd KLE-Tech-Question-Bank
-
-### 2️⃣** Install Dependencies & Run application**
-```bash
+2️⃣ Install Dependencies & Run Application
+bash
+Copy code
 pip install -r requirements.txt
 python app.py
+3️⃣ Open the Home Page
+Once the server is running, open your browser and visit:
 
-### 3️⃣** Run home page**
-```bash
-welcome.html
+arduino
+Copy code
+http://127.0.0.1:5000/welcome.html
